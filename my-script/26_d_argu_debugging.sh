@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+#to access the arguments
+
+set -x
+
+echo "First argument is $1"
+echo "Second argument is $2"
+echo "Third argument is $3"
+
+echo "All the arguments are - $@"
+echo "Number of arguments are - $#"
+
+#for loop to access the values from arguments
+
+
+for filename in $@
+do
+	echo "Copying file - $filename"
+done
+
