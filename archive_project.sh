@@ -23,7 +23,7 @@ then
 fi
 
 #Find the list of files larger than 2MB
-for i in `find $BASH -maxdepth $DEPTH -type f -size +2k`
+for i in `find $BASH -maxdepth $DEPTH -type f -size +2M`
 do
 	if [ $RUN -eq 0 ]
 	then
