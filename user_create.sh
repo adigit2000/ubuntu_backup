@@ -27,10 +27,9 @@ COMMENT="${@}"
 #Create a password
 
 PASSWORD=$(date +%s%N)
-echo $PASSWORD
 
 #Create the user 
-useradd -c $COMMENT -m $USER_NAME
+useradd -c "${COMMENT}" -m $USER_NAME
 
 #Check if user is successfully created or not
 
@@ -42,7 +41,8 @@ fi
 
 #Set the password for the user
 
-password $PASSWORD $USER_NAME
+echo $PASSWORD | passwd --stdin $USER_NAME
+
 
 #Check if password id successfully set or not
 
