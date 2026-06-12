@@ -41,7 +41,7 @@ fi
 
 #Set the password for the user
 
-echo $PASSWORD | passwd --stdin $USER_NAME
+echo "${USER_NAME}:${PASSWORD}" | chpasswd
 
 
 #Check if password id successfully set or not
